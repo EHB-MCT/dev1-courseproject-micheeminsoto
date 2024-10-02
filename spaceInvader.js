@@ -11,9 +11,17 @@ function drawRectangle() {
 	canvas.height = window.innerHeight;
 	let context = canvas.getContext("2d");
 	
-
-
 	context.rect(0, 0, canvas.width,canvas.height);
 	context.fillStyle = "#000000";
 	context.fill();
+}
+
+function drawSpaceInvader() {
+	let canvas = document.querySelector("canvas");
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight;
+	let context = canvas.getContext("2d");
+
+	context.beginPath();
+	
 }
