@@ -3,7 +3,6 @@
 
 /* alert("Draw your space invader here"); */
 
-
 setup();
 window.onload = setup;
 
@@ -39,21 +38,21 @@ function drawSpaceInvader() {
 	context.fill();
 
 	context.beginPath();
-	context.fillRect(700,200,50,50);
+	context.fillRect(900,200,50,50);
 	context.fillStyle = "##00ff00";
 	context.fill();
 
 	context.beginPath();
-	context.fillRect(600,200,50,50);
+	context.fillRect(800,200,50,50);
 	context.fillStyle = "#00ff00";
 	context.fill();
 
 	context.beginPath();
-	context.fillRect(600,300,150,100);
+	context.fillRect(800,300,150,100);
 	context.fill();
 
 	context.beginPath();
-	context.fillRect(650,250,50,50);
+	context.fillRect(850,250,50,50);
 	context.fill(); 
 
 
