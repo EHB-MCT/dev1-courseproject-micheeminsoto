@@ -1,61 +1,47 @@
 "use strict";
+window.onresize = drawSpaceInvader;
+let canvas = document.querySelector("canvas");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+let context = canvas.getContext("2d");
 
 
-/* alert("Draw your space invader here"); */
-
-setup();
-window.onload = setup;
+drawRectangle();
+drawSpaceInvader();
 
 
-
-function setup() {
-	drawRectangle(); 
-	drawSpaceInvader();
-	window.onresize = setup;
-}
-
-
- function drawRectangle() {
+function drawRectangle() {
 	let canvas = document.querySelector("canvas");
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
 	let context = canvas.getContext("2d");
-	
-	
-	context.rect(0, 0,canvas.width,canvas.height);
-	context.fillStyle = "#000000";
+	window.onresize = drawRectangle;
+
+	context.beginPath();
+	context.rect(100,100,300,300);
 	context.fill();
-} 
- 
+}
+
 function drawSpaceInvader() {
-	let canvas = document.querySelector("canvas");
-	let context = canvas.getContext("2d");
-	
-	
 	context.beginPath();
-	context.fillRect(50,50,50,50);
+	context.rect(180,150,50,50);
 	context.fillStyle = "#00ff00";
 	context.fill();
 
 	context.beginPath();
-	context.fillRect(900,200,50,50);
-	context.fillStyle = "##00ff00";
-	context.fill();
-
-	context.beginPath();
-	context.fillRect(800,200,50,50);
+	context.rect(280,150,50,50);
 	context.fillStyle = "#00ff00";
 	context.fill();
 
 	context.beginPath();
-	context.fillRect(800,300,150,100);
+	context.rect(230,200,50,50);
+	context.fillStyle = "#00ff00";
 	context.fill();
 
 	context.beginPath();
-	context.fillRect(850,250,50,50);
-	context.fill(); 
-
-
-	
+	context.rect(180,250,150,100);
+	context.fillStyle = "#00ff00";
+	context.fill();
 
 }
+
