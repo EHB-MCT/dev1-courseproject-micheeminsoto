@@ -3,16 +3,15 @@ import context from "../../scripts/context.js";
 import * as Utils from "../../scripts/utils.js";
 
 let canvas = document.createElement("canvas");
+ 
 
-
-//bedekt de volledige scherm van de canvas canvas.width = window.innerWidth;
+//bedekt de volledige scherm van de canvas 
+canvas.width = window.innerWidth; 
 canvas.height = window.innerHeight;
 
 let size = 100; //grootte van de cirkel en halve cirkel
 let rows = Math.ceil(canvas.height / size);
 let cols = Math.ceil(canvas.width / size);
-
-
 
  
 drawPattern();
@@ -41,12 +40,12 @@ function drawPattern() {
             if(shape == "circle"){  
                 context.beginPath();
                 context.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
-                context.fillStyle = '#355e5b'; //donkergroene kleur
+                context.fillStyle = '#355e5b'; //kleur
                 context.fill();
             } else {  //tekent halve cirkel  
                 context.beginPath()
                 context.arc(size / 2, size / 2, size / 2, 0,Math.PI);
-                context.fillStyle = '#355e5b'; //
+                context.fillStyle = '#355e5b'; //kleur 
                 context.fill();
             }
             context.restore();
@@ -56,10 +55,8 @@ function drawPattern() {
 
 } 
  
-
  
-
-
+ 
 
 
 
