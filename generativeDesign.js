@@ -14,6 +14,8 @@ let size = 100;
 let rows = Math.ceil(canvas.height / size);
 let cols = Math.ceil(canvas.width / size);
 
+
+
 drawPattern(context, rows, cols, size);
 
 function drawCircle(context, x, y, size, fillColor){
@@ -46,12 +48,19 @@ function drawPattern(context, rows, cols, size){
 
             if(shape == "circle"){
                 drawCircle(context, 0, 0, size, `hsl(${Math.random() * 360}, 100%, 50%)`);
-                circlePositions.push({ type: "circle", x, y, size, fillColor, rotation});
+               /*  circlePositions.push({ type: "circle", x, y, size, fillColor, rotation});
+ */
+                circlePositions.push({type: "circle", x: 100, y: 200, size: 100, fillColor: "hsl(170, 100%, 50%)" ,rotation: 0 })
+                
 
 
             } else{
                 drawHalfCircle(context, 0, 0, size, "#355e5b");
-                circlePositions.push({type: "halfCircle", x, y, size, fillColor});
+               /*  circlePositions.push({type: "halfCircle", x, y, size, fillColor, rotation}); */
+
+               circlePositions.push({type: "halfCircle", x: 100, y: 200, size: 100, fillColor: "hsl(120, 100%, 50%)" ,rotation: 0})
+
+
             }
 
             context.restore();
@@ -61,10 +70,9 @@ function drawPattern(context, rows, cols, size){
 
 
 //mousemove
-angle = e.pageX / 100
+/* angle = e.pageX / 100 */
 
  
-
 
 
 
