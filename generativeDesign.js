@@ -7,6 +7,9 @@ let canvas = document.createElement("canvas");
 canvas.width = 1000; 
 canvas.height = 1000; 
 
+let angle = 0;
+let circlePositions = []; // Array om cirkels op te slaan
+
 let size = 100;
 let rows = Math.ceil(canvas.height / size);
 let cols = Math.ceil(canvas.width / size);
@@ -22,7 +25,7 @@ function drawCircle(context, x, y, size, fillColor){
 
 function drawHalfCircle(context, x, y, size, fillColor){
     context.beginPath();
-    context.arc(x + size / 2, y + size / 2, size / 2, 0, Math.PI);
+    context.arc(x + size / 2, y + size / 2, size / 2, 0+angle, Math.PI+ angle);
     context.fillStyle = fillColor;
     context.fill();
 } 
@@ -54,6 +57,8 @@ function drawPattern(context, rows, cols, size){
 } 
 
 
+//mousemove
+angle = e.pageX / 100
 
  
 
