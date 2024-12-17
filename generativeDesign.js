@@ -46,9 +46,12 @@ function drawPattern(context, rows, cols, size){
 
             if(shape == "circle"){
                 drawCircle(context, 0, 0, size, `hsl(${Math.random() * 360}, 100%, 50%)`);
-           
+                circlePositions.push({ type: "circle", x, y, size, fillColor, rotation});
+
+
             } else{
                 drawHalfCircle(context, 0, 0, size, "#355e5b");
+                circlePositions.push({type: "halfCircle", x, y, size, fillColor});
             }
 
             context.restore();
