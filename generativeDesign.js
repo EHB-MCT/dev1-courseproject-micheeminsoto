@@ -5,8 +5,6 @@ import * as Utils from "./scripts/utils.js";
 let canvas = document.createElement("canvas");
 document.body.appendChild(canvas); // Voeg het canvas toe aan de body
 
-
-
 canvas.width = 1000; 
 canvas.height = 1000; 
 
