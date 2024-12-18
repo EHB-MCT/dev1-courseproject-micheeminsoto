@@ -9,6 +9,7 @@ canvas.height = 1000;
 
 let angle = 0;
 let circlePositions = []; // Array om cirkels op te slaan
+canvas.addEventListener("mousemove" , move);
 
 let size = 100;
 let rows = Math.ceil(canvas.height / size);
@@ -116,7 +117,29 @@ function getRandomColor() {
     }
 
 
-    
+    function move(eventData){
+        const rect = canvas.getBoundingClientRect();
+        const mouseX = eventData.pageX - rect.left;
+        const mouseY = eventData.pageY - rect.top;
+
+        circlePositions.forEach(circle => {
+            if(
+                mouseX >= circle.x &&
+                mouseX <= circle.x + circle.size &&
+                mouseY >= circle.y  &&
+                mouseY <= circle.y + circle.size
+            ) {
+                circle.fillColor = getRandomColor();
+            }
+
+        });
+
+
+        drawPattern(context); // hertekenen op het canvas
+
+
+
+    }
 
 //mousemove
 /* angle = e.pageX / 100 */
